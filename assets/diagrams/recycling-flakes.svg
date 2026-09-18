@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none">
+  <defs>
+    <linearGradient id="flakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00E599" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0.7"/>
+    </linearGradient>
+    <radialGradient id="sensorGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00E599" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00E599" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Technical Background Grid -->
+  <rect width="480" height="320" rx="16" fill="#0E1217"/>
+  <path d="M 40 0 V 320 M 120 0 V 320 M 200 0 V 320 M 280 0 V 320 M 360 0 V 320 M 440 0 V 320" stroke="#1E2633" stroke-width="1" stroke-dasharray="3 3"/>
+  <path d="M 0 40 H 480 M 0 100 H 480 M 0 160 H 480 M 0 220 H 480 M 0 280 H 480" stroke="#1E2633" stroke-width="1" stroke-dasharray="3 3"/>
+
+  <!-- Optical Sorting Chute -->
+  <polygon points="140,40 340,40 280,130 200,130" fill="#161D26" stroke="#334155" stroke-width="2"/>
+  <text x="240" y="32" font-family="'Space Grotesk', monospace" font-size="11" fill="#8E9AA8" text-anchor="middle" letter-spacing="2">INLET: RECOVERED POLYMERS</text>
+
+  <!-- Sensor Optical Scanning Array -->
+  <rect x="180" y="138" width="120" height="24" rx="4" fill="#1C2430" stroke="#00E599" stroke-width="1.5"/>
+  <circle cx="205" cy="150" r="4" fill="#00E599"/>
+  <circle cx="240" cy="150" r="4" fill="#00B4D8"/>
+  <circle cx="275" cy="150" r="4" fill="#00E599"/>
+  <text x="240" y="154" font-family="'Space Grotesk', monospace" font-size="8" fill="#F8FAFC" text-anchor="middle">SPECTRO SENSORS</text>
+  
+  <!-- Optical Scan Rays -->
+  <path d="M 205 162 L 180 210 M 240 162 L 240 210 M 275 162 L 300 210" stroke="#00E599" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.8"/>
+  <circle cx="240" cy="186" r="40" fill="url(#sensorGlow)"/>
+
+  <!-- Falling Washed Flakes -->
+  <polygon points="190,70 205,65 210,78 195,82" fill="#00E599" opacity="0.8"/>
+  <polygon points="260,75 278,70 272,88 255,84" fill="#00B4D8" opacity="0.85"/>
+  <polygon points="225,95 240,90 238,108 220,102" fill="#F8FAFC" opacity="0.75"/>
+  
+  <polygon points="210,180 226,172 230,192 215,195" fill="url(#flakeGrad)"/>
+  <polygon points="255,185 272,178 268,200 250,198" fill="url(#flakeGrad)"/>
+
+  <!-- Classified Flakes Discharge -->
+  <path d="M 170 220 L 130 280 H 220 L 220 220 Z" fill="#121820" stroke="#334155" stroke-width="1.5"/>
+  <path d="M 260 220 L 260 280 H 350 L 310 220 Z" fill="#121820" stroke="#00E599" stroke-width="1.5"/>
+
+  <!-- Pure Flakes Output -->
+  <text x="305" y="260" font-family="'Space Grotesk', monospace" font-size="10" fill="#00E599" font-weight="700">PURIFIED FLAKES</text>
+  <text x="305" y="274" font-family="'Space Grotesk', monospace" font-size="8" fill="#8E9AA8">DECONTAMINATED</text>
+  <polygon points="295,240 305,236 308,248 298,250" fill="#00E599"/>
+  <polygon points="320,242 332,238 330,252 318,250" fill="#00B4D8"/>
+
+  <!-- Spec Tag -->
+  <rect x="24" y="276" width="130" height="24" rx="4" fill="#161D26" stroke="#2A3442"/>
+  <text x="34" y="292" font-family="'Space Grotesk', monospace" font-size="9" fill="#00E599">RECOVERY: CLOSED-LOOP</text>
+</svg>

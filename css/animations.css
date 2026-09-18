@@ -1,0 +1,87 @@
+/* ==========================================================================
+   HELIOSUNTECH PLASTICS PRIVATE LIMITED - ANIMATIONS & ACCESSIBILITY
+   GPU-Accelerated Smooth Motion & Reduced Motion Safeguards
+   ========================================================================== */
+
+/* Subtle Glow Pulsing */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(0, 229, 153, 0.4);
+    opacity: 0.9;
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(0, 229, 153, 0.85);
+    opacity: 1;
+  }
+}
+
+/* Float Animation */
+@keyframes soft-float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Material Flow Scanline */
+@keyframes scanline {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1000%);
+  }
+}
+
+/* Orbit Motion for Circular Loop */
+@keyframes slow-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+.animate-float {
+  animation: soft-float 5s infinite ease-in-out;
+}
+
+.animate-rotate {
+  animation: slow-rotate 35s linear infinite;
+}
+
+/* Scroll reveal helper */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s var(--ease-smooth), transform 0.7s var(--ease-smooth);
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   ACCESSIBILITY: PREFERS-REDUCED-MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
