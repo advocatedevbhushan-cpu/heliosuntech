@@ -111,6 +111,12 @@
   transition: all var(--duration-fast) ease;
 }
 
+/* Mobile Drawer hidden by default on desktop */
+.mobile-nav-drawer {
+  display: none;
+}
+
+
 /* --------------------------------------------------------------------------
    2. BUTTONS & CALL-TO-ACTIONS
    -------------------------------------------------------------------------- */
