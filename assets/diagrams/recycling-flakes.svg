@@ -1,54 +1,141 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" fill="none">
   <defs>
-    <linearGradient id="flakeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E599" stop-opacity="0.9"/>
-      <stop offset="100%" stop-color="#00B4D8" stop-opacity="0.7"/>
-    </linearGradient>
-    <radialGradient id="sensorGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#00E599" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#00E599" stop-opacity="0"/>
+    <radialGradient id="sensorGlowLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#52B216" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#52B216" stop-opacity="0"/>
     </radialGradient>
+
+    <style><![CDATA[
+      /* Self-contained animations for Recycling and Flakes */
+      @keyframes flake-drop-a {
+        0% { transform: translateY(-25px) rotate(0deg); opacity: 0; }
+        20% { opacity: 1; }
+        80% { opacity: 1; }
+        100% { transform: translateY(65px) rotate(45deg); opacity: 0; }
+      }
+      @keyframes flake-drop-b {
+        0% { transform: translateY(-30px) rotate(0deg); opacity: 0; }
+        25% { opacity: 1; }
+        75% { opacity: 1; }
+        100% { transform: translateY(75px) rotate(-60deg); opacity: 0; }
+      }
+      @keyframes flake-drop-c {
+        0% { transform: translateY(-20px) rotate(0deg); opacity: 0; }
+        30% { opacity: 1; }
+        70% { opacity: 1; }
+        100% { transform: translateY(60px) rotate(90deg); opacity: 0; }
+      }
+      @keyframes nir-sweep {
+        0%, 100% { opacity: 0.35; stroke-width: 1.5; stroke: #52B216; }
+        50% { opacity: 1; stroke-width: 2.8; stroke: #88DE3D; filter: drop-shadow(0 0 6px #52B216); }
+      }
+      @keyframes sensor-blink {
+        0%, 100% { fill: #146B44; }
+        50% { fill: #52B216; filter: drop-shadow(0 0 4px #52B216); }
+      }
+      @keyframes sorted-bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+      }
+      @keyframes glow-pulse {
+        0%, 100% { transform: scale(0.9); opacity: 0.5; }
+        50% { transform: scale(1.15); opacity: 0.9; }
+      }
+
+      .falling-flake-1 {
+        animation: flake-drop-a 1.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .falling-flake-2 {
+        animation: flake-drop-b 1.9s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.3s;
+      }
+      .falling-flake-3 {
+        animation: flake-drop-c 1.5s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.6s;
+      }
+      .falling-flake-4 {
+        animation: flake-drop-a 1.7s cubic-bezier(0.4, 0, 0.2, 1) infinite 0.9s;
+      }
+      .nir-beam-line {
+        animation: nir-sweep 0.8s ease-in-out infinite alternate;
+      }
+      .sensor-led-1 {
+        animation: sensor-blink 0.6s infinite alternate;
+      }
+      .sensor-led-2 {
+        animation: sensor-blink 0.6s infinite alternate 0.3s;
+      }
+      .sensor-glow-sphere {
+        transform-origin: 240px 186px;
+        animation: glow-pulse 1.4s infinite alternate ease-in-out;
+      }
+      .sorted-flakes-group {
+        animation: sorted-bounce 2s infinite ease-in-out;
+      }
+    ]]></style>
   </defs>
 
-  <!-- Technical Background Grid -->
-  <rect width="480" height="320" rx="16" fill="#0E1217"/>
-  <path d="M 40 0 V 320 M 120 0 V 320 M 200 0 V 320 M 280 0 V 320 M 360 0 V 320 M 440 0 V 320" stroke="#1E2633" stroke-width="1" stroke-dasharray="3 3"/>
-  <path d="M 0 40 H 480 M 0 100 H 480 M 0 160 H 480 M 0 220 H 480 M 0 280 H 480" stroke="#1E2633" stroke-width="1" stroke-dasharray="3 3"/>
+  <!-- Clean Professional Light Background -->
+  <rect width="480" height="320" rx="16" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="478" height="318" rx="15" stroke="#E2EFE7" stroke-width="1.5"/>
 
   <!-- Optical Sorting Chute -->
-  <polygon points="140,40 340,40 280,130 200,130" fill="#161D26" stroke="#334155" stroke-width="2"/>
-  <text x="240" y="32" font-family="'Space Grotesk', monospace" font-size="11" fill="#8E9AA8" text-anchor="middle" letter-spacing="2">INLET: RECOVERED POLYMERS</text>
+  <polygon points="140,40 340,40 280,130 200,130" fill="#F4FAF6" stroke="#146B44" stroke-width="2"/>
+  <text x="240" y="32" font-family="'Space Grotesk', monospace" font-size="11" fill="#146B44" text-anchor="middle" font-weight="700" letter-spacing="2">INLET: RECOVERED POLYMERS</text>
 
   <!-- Sensor Optical Scanning Array -->
-  <rect x="180" y="138" width="120" height="24" rx="4" fill="#1C2430" stroke="#00E599" stroke-width="1.5"/>
-  <circle cx="205" cy="150" r="4" fill="#00E599"/>
-  <circle cx="240" cy="150" r="4" fill="#00B4D8"/>
-  <circle cx="275" cy="150" r="4" fill="#00E599"/>
-  <text x="240" y="154" font-family="'Space Grotesk', monospace" font-size="8" fill="#F8FAFC" text-anchor="middle">SPECTRO SENSORS</text>
+  <rect x="180" y="138" width="120" height="24" rx="4" fill="#FFFFFF" stroke="#52B216" stroke-width="1.8"/>
+  <circle cx="205" cy="150" r="4.5" class="sensor-led-1" fill="#52B216"/>
+  <circle cx="240" cy="150" r="4.5" class="sensor-led-2" fill="#146B44"/>
+  <circle cx="275" cy="150" r="4.5" class="sensor-led-1" fill="#52B216"/>
+  <text x="240" y="154" font-family="'Space Grotesk', monospace" font-size="8.5" font-weight="700" fill="#0A221A" text-anchor="middle">OPTICAL NIR SENSOR</text>
   
-  <!-- Optical Scan Rays -->
-  <path d="M 205 162 L 180 210 M 240 162 L 240 210 M 275 162 L 300 210" stroke="#00E599" stroke-width="1.5" stroke-dasharray="2 3" opacity="0.8"/>
-  <circle cx="240" cy="186" r="40" fill="url(#sensorGlow)"/>
+  <!-- Optical Scan Rays (Pulsing Laser Field) -->
+  <g class="nir-beam-line">
+    <line x1="205" y1="162" x2="180" y2="210" stroke="#52B216" stroke-width="2" stroke-dasharray="3 3"/>
+    <line x1="222" y1="162" x2="210" y2="210" stroke="#88DE3D" stroke-width="2.5" stroke-dasharray="3 3"/>
+    <line x1="240" y1="162" x2="240" y2="210" stroke="#52B216" stroke-width="2" stroke-dasharray="3 3"/>
+    <line x1="258" y1="162" x2="270" y2="210" stroke="#88DE3D" stroke-width="2.5" stroke-dasharray="3 3"/>
+    <line x1="275" y1="162" x2="300" y2="210" stroke="#52B216" stroke-width="2" stroke-dasharray="3 3"/>
+  </g>
+  <circle cx="240" cy="186" r="40" fill="url(#sensorGlowLight)" class="sensor-glow-sphere"/>
 
-  <!-- Falling Washed Flakes -->
-  <polygon points="190,70 205,65 210,78 195,82" fill="#00E599" opacity="0.8"/>
-  <polygon points="260,75 278,70 272,88 255,84" fill="#00B4D8" opacity="0.85"/>
-  <polygon points="225,95 240,90 238,108 220,102" fill="#F8FAFC" opacity="0.75"/>
+  <!-- Inbound Shredded Flakes Cascading Through Sorting Zone -->
+  <g class="falling-flake-1">
+    <polygon points="190,65 206,60 212,74 195,78" fill="#52B216"/>
+  </g>
+  <g class="falling-flake-2">
+    <polygon points="260,70 278,65 272,84 255,80" fill="#146B44"/>
+  </g>
+  <g class="falling-flake-3">
+    <polygon points="225,85 242,80 238,100 220,94" fill="#68C924"/>
+  </g>
+  <g class="falling-flake-4">
+    <polygon points="215,110 230,105 228,122 212,118" fill="#1A8253"/>
+  </g>
+
+  <!-- Post-Sensor Verified Flakes Flowing Downward -->
+  <g class="falling-flake-1">
+    <polygon points="210,165 226,158 230,178 215,181" fill="#52B216"/>
+  </g>
+  <g class="falling-flake-2">
+    <polygon points="255,170 272,163 268,185 250,183" fill="#146B44"/>
+  </g>
+
+  <!-- Classified Flakes Discharge Chutes -->
+  <path d="M 170 220 L 130 280 H 220 L 220 220 Z" fill="#F4FAF6" stroke="#146B44" stroke-width="1.5"/>
+  <path d="M 260 220 L 260 280 H 350 L 310 220 Z" fill="#F4FAF6" stroke="#52B216" stroke-width="1.8"/>
+
+  <!-- Pure Flakes Output with Pulsing Badge -->
+  <text x="305" y="258" font-family="'Space Grotesk', monospace" font-size="10" fill="#146B44" font-weight="700">PURIFIED FLAKES</text>
+  <text x="305" y="272" font-family="'Space Grotesk', monospace" font-size="8.5" fill="#3B584C">DECONTAMINATED</text>
   
-  <polygon points="210,180 226,172 230,192 215,195" fill="url(#flakeGrad)"/>
-  <polygon points="255,185 272,178 268,200 250,198" fill="url(#flakeGrad)"/>
-
-  <!-- Classified Flakes Discharge -->
-  <path d="M 170 220 L 130 280 H 220 L 220 220 Z" fill="#121820" stroke="#334155" stroke-width="1.5"/>
-  <path d="M 260 220 L 260 280 H 350 L 310 220 Z" fill="#121820" stroke="#00E599" stroke-width="1.5"/>
-
-  <!-- Pure Flakes Output -->
-  <text x="305" y="260" font-family="'Space Grotesk', monospace" font-size="10" fill="#00E599" font-weight="700">PURIFIED FLAKES</text>
-  <text x="305" y="274" font-family="'Space Grotesk', monospace" font-size="8" fill="#8E9AA8">DECONTAMINATED</text>
-  <polygon points="295,240 305,236 308,248 298,250" fill="#00E599"/>
-  <polygon points="320,242 332,238 330,252 318,250" fill="#00B4D8"/>
+  <g class="sorted-flakes-group">
+    <polygon points="295,238 306,234 309,246 298,248" fill="#52B216"/>
+    <polygon points="320,240 332,236 330,250 318,248" fill="#146B44"/>
+    <polygon points="334,242 344,238 342,252 332,250" fill="#68C924"/>
+  </g>
 
   <!-- Spec Tag -->
-  <rect x="24" y="276" width="130" height="24" rx="4" fill="#161D26" stroke="#2A3442"/>
-  <text x="34" y="292" font-family="'Space Grotesk', monospace" font-size="9" fill="#00E599">RECOVERY: CLOSED-LOOP</text>
+  <rect x="24" y="276" width="165" height="26" rx="4" fill="#F4FAF6" stroke="#146B44"/>
+  <circle cx="36" cy="289" r="4" fill="#52B216" class="sensor-led-1"/>
+  <text x="46" y="293" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#146B44">OPTICAL SORT: 99.8%</text>
 </svg>

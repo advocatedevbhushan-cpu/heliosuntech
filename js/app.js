@@ -4,25 +4,34 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Initialize Particle Canvas
-  const particleEngine = new window.PolymerParticleEngine('heroCanvas');
+  if (typeof window.PolymerParticleEngine === 'function') {
+    window.particleEngine = new window.PolymerParticleEngine('heroCanvas');
+  }
 
   // 2. Initialize Material Flow
-  const flowManager = new window.MaterialFlowManager();
+  if (typeof window.MaterialFlowManager === 'function') {
+    window.flowManager = new window.MaterialFlowManager();
+  }
 
   // 3. Initialize Catalogue
-  const catalogueManager = new window.CatalogueManager();
-  window.catalogueInst = catalogueManager;
+  if (typeof window.CatalogueManager === 'function') {
+    window.catalogueInst = new window.CatalogueManager();
+  }
 
   // 4. Initialize Quality Dashboard
-  const qualityDashboard = new window.QualityDashboard();
+  if (typeof window.QualityDashboard === 'function') {
+    window.qualityDashboard = new window.QualityDashboard();
+  }
 
   // 5. Initialize RFQ System
-  const rfqManager = new window.RfqManager();
-  window.rfqInst = rfqManager;
+  if (typeof window.RfqManager === 'function') {
+    window.rfqInst = new window.RfqManager();
+  }
 
   // 6. Initialize CMS Manager
-  const cmsManager = new window.CmsManager();
-  window.cmsInst = cmsManager;
+  if (typeof window.CmsManager === 'function') {
+    window.cmsInst = new window.CmsManager();
+  }
 
   // 7. Navbar Scroll Transition
   const header = document.getElementById('siteHeader');

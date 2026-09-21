@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quality Assurance &amp; Batch Traceability | Heliosuntech Plastics</title>
+  
+  <meta name="description" content="Every production run at Heliosuntech Plastics is monitored through standardized parameter testing, retention sampling, and batch-level traceability records.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION HEADER
+       ========================================================================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" aria-label="Heliosuntech Home">
+        <img src="assets/logo.svg" alt="Heliosuntech Plastics Logo" width="220" height="42">
+      </a>
+
+      <!-- Desktop Nav Menu -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="quality.html" class="nav-link active">Quality</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Hamburger -->
+      <div class="nav-actions">
+        <a href="contact.html" class="btn btn-outline-accent btn-sm">
+          Talk to Us
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileDrawer">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="about.html" class="nav-link">About</a>
+    <a href="solutions.html" class="nav-link">Solutions</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="quality.html" class="nav-link active">Quality Control</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">
+      Request a Quote / RFQ
+    </a>
+  </div>
+
+  <main>
+    <!-- =========================================================================
+         SUBPAGE HERO BANNER
+         ========================================================================= -->
+    <section class="subpage-hero">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">/</span>
+          <span class="breadcrumb-current">Quality Assurance</span>
+        </div>
+
+        <div class="section-tag">Process Assurance &amp; Testing</div>
+        <h1 class="subpage-hero-title">Consistency Matters.</h1>
+        <p class="subpage-hero-subtitle">
+          Every production run at Heliosuntech Plastics is monitored through standardized parameter testing, retention sampling, and batch-level traceability records to ensure zero material variance for downstream converters.
+        </p>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         1. INLINE BATCH INSPECTION CONSOLE
+         ========================================================================= -->
+    <section class="section" id="console">
+      <div class="container">
+        <div class="section-tag">Traceability Platform</div>
+        <h2 class="section-title">Inline Batch Inspection Console</h2>
+        <p class="section-subtitle">
+          Search live production records and inspect verified quality control logs across recycled granules and coating film lots.
+        </p>
+
+        <!-- Technical Dashboard Console -->
+        <div class="quality-console reveal-on-scroll">
+          <div class="console-header">
+            <div class="console-title">
+              <span class="console-status-dot"></span>
+              <span>INLINE BATCH INSPECTION CONSOLE</span>
+            </div>
+            <div style="max-width: 280px; width: 100%;">
+              <input type="text" id="searchBatchInput" placeholder="Lookup Batch ID (e.g. HST-26)..." 
+                     style="width: 100%; background: #FFFFFF; border: 1.5px solid var(--border-medium); border-radius: 4px; padding: 0.45rem 0.85rem; color: var(--text-primary); font-size: 0.88rem; outline: none;">
+            </div>
+          </div>
+
+          <div class="console-table-wrap">
+            <table class="quality-table">
+              <thead>
+                <tr>
+                  <th>Batch ID</th>
+                  <th>Polymer &amp; Grade</th>
+                  <th>Production Date</th>
+                  <th>Inspection Check</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="qualityTableBody">
+                <!-- Populated by qualityDashboard.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">
+          <span>Traceability Standard: Retention samples archived for 180 days per lot.</span>
+          <span>Official Certificate of Analysis (COA) supplied with dispatch.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         2. TESTING METHODOLOGIES
+         ========================================================================= -->
+    <section class="section" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-tag">Laboratory Rigor</div>
+        <h2 class="section-title">Four Pillars of Quality Verification</h2>
+        <p class="section-subtitle">
+          Continuous testing protocols ensure high mechanical and optical uniformity across every dispatched pallet.
+        </p>
+
+        <div class="grid-4 stagger-container reveal-on-scroll" style="margin-top: 3.5rem;">
+          <div class="pillar-card interactive-tilt">
+            <div class="pillar-num">TEST 01</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 0.6rem;">MFI Calibration</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Melt Flow Index testing verifies melt viscosity under ASTM D1238 standards, matching injection moulding cycle times.
+            </p>
+          </div>
+
+          <div class="pillar-card interactive-tilt">
+            <div class="pillar-num">TEST 02</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 0.6rem;">Density &amp; Moisture</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Moisture levels calibrated below 0.20% with precision moisture analyzer and gradient density immersion testing.
+            </p>
+          </div>
+
+          <div class="pillar-card interactive-tilt">
+            <div class="pillar-num">TEST 03</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 0.6rem;">Surface Energy</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              Corona treatment verification via dyne testing pens ensuring optimal adhesion for coating and lamination applications.
+            </p>
+          </div>
+
+          <div class="pillar-card interactive-tilt">
+            <div class="pillar-num">TEST 04</div>
+            <h4 style="font-size: 1.25rem; margin-bottom: 0.6rem;">Archive Retention</h4>
+            <p style="font-size: 0.9rem; color: var(--text-secondary);">
+              180-day physical lot sample archiving for continuous customer traceability and comparative analytical verification.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section" style="text-align: center;">
+      <div class="container" style="max-width: 840px;">
+        <h2 class="section-title" style="margin-left: auto; margin-right: auto;">Need Specific Lot COA Documentation?</h2>
+        <p class="section-subtitle" style="margin-left: auto; margin-right: auto; margin-bottom: 2rem;">
+          Our lab technicians provide custom testing reports for procurement audits and technical approvals.
+        </p>
+        <a href="contact.html" class="btn btn-primary btn-lg">Request Quality Documentation</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       MODALS
+       ========================================================================= -->
+  <!-- Quality Batch Details Modal -->
+  <div class="modal-backdrop" id="batchModal" role="dialog" aria-modal="true">
+    <div class="modal-box" id="batchModalContent">
+      <!-- Populated dynamically by app.js -->
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="globalToast" role="status" aria-live="polite"></div>
+
+  <!-- =========================================================================
+       SITE FOOTER
+       ========================================================================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <div class="footer-brand">
+          <img src="assets/logo.svg" alt="Heliosuntech Logo" width="200" height="38">
+          <p>
+            <strong>Engineering the Next Generation of Plastics.</strong><br>
+            Transforming polymer waste into reliable industrial materials, engineered granules, and advanced coating films.
+          </p>
+          <div style="margin-top: 1.25rem;">
+            <span style="display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: var(--accent-emerald); font-family: var(--font-display); font-weight: 600;">
+              <span style="width: 7px; height: 7px; border-radius: 50%; background: var(--accent-lime);"></span>
+              Manufacturing Plant: Ecotech-III, Greater Noida, India
+            </span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Heliosuntech</a></li>
+            <li><a href="solutions.html">Solutions &amp; Flow</a></li>
+            <li><a href="products.html">Product Catalogue</a></li>
+            <li><a href="quality.html">Quality Assurance</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>QA Capabilities</h5>
+          <ul class="footer-links">
+            <li><a href="#console">Batch Lookup Console</a></li>
+            <li><a href="#console">Certificate of Analysis</a></li>
+            <li><a href="quality.html">MFI Calibration</a></li>
+            <li><a href="quality.html">Sample Retention</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Procurement</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">Materials Catalogue</a></li>
+            <li><a href="contact.html">Request a Quote / RFQ</a></li>
+            <li><a href="contact.html">Feedstock Scrap Supply</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Direct Contact</h5>
+          <ul class="footer-links">
+            <li><a href="contact.html">Greater Noida Facility</a></li>
+            <li><a href="mailto:contact@heliosuntech.com">contact@heliosuntech.com</a></li>
+            <li><a href="contact.html" class="btn btn-outline-accent btn-sm" style="margin-top: 0.5rem;">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; Heliosuntech Plastics Private Limited. All Rights Reserved.
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="javascript:void(0)" onclick="alert('Corporate Privacy Policy: We do not share customer procurement specifications.')">Privacy Policy</a>
+          <a href="javascript:void(0)" onclick="alert('Commercial Terms & Conditions available with quotation dispatch.')">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/qualityDashboard.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

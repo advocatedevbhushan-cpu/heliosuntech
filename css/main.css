@@ -1,46 +1,58 @@
 /* ==========================================================================
    HELIOSUNTECH PLASTICS PRIVATE LIMITED - DESIGN SYSTEM & MAIN TOKENS
-   Deep Charcoal / Industrial Dark / Electric Circular Green Accent
+   Light Professional Theme / Eco-Futuristic Circularity / Crisp Surfaces
+   Grounded in Corporate Brand Colors: Clean White, Deep Slate-Forest,
+   Vibrant Recycling Lime & Authoritative Emerald
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette: Dark Industrial Surfaces */
-  --bg-primary: #0B0D11;
-  --bg-secondary: #11151D;
-  --bg-tertiary: #161C26;
-  --bg-card: rgba(22, 28, 38, 0.75);
-  --bg-card-hover: rgba(28, 36, 48, 0.85);
-  --bg-glass: rgba(14, 18, 25, 0.72);
+  /* Surface System: Crisp Light Professional */
+  --bg-primary: #FFFFFF;              /* Pristine clean white */
+  --bg-secondary: #F4FAF6;            /* Soft eco-mint wash */
+  --bg-tertiary: #EAF4EE;             /* Muted sage background for toolbars & headers */
+  --bg-card: #FFFFFF;                 /* Pure white card base */
+  --bg-card-hover: #FFFFFF;
+  --bg-glass: rgba(255, 255, 255, 0.92);
 
   /* Accents & Signals */
-  --accent-green: #00E599;         /* Core circularity & action */
-  --accent-green-glow: rgba(0, 229, 153, 0.25);
-  --accent-green-dim: rgba(0, 229, 153, 0.12);
-  --accent-cyan: #00B4D8;          /* Engineering & precision specs */
-  --accent-cyan-glow: rgba(0, 180, 216, 0.22);
-  --accent-amber: #F59E0B;         /* Inspection & pending states */
+  --accent-lime: #52B216;             /* Crisp high-contrast recycling lime */
+  --accent-lime-bright: #68C924;      /* Interactive vibrant lime */
+  --accent-lime-dim: rgba(82, 178, 22, 0.10);
+  --accent-lime-glow: rgba(82, 178, 22, 0.25);
 
-  /* Neutrals & Metals */
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
-  --text-inverse: #0B0D11;
+  --accent-emerald: #146B44;          /* Core authoritative corporate emerald */
+  --accent-emerald-light: #1A8253;    /* Hover & interactive emerald */
+  --accent-emerald-dim: rgba(20, 107, 68, 0.08);
+  --accent-emerald-glow: rgba(20, 107, 68, 0.20);
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-medium: rgba(255, 255, 255, 0.15);
-  --border-accent: rgba(0, 229, 153, 0.4);
+  --accent-navy: #0D2338;             /* Tech slate navy from brand artwork */
+  --accent-amber: #D97706;            /* QA review & pending indicator */
+
+  /* Neutrals & Typography */
+  --text-primary: #0A221A;            /* Deep forest slate for sharp executive legibility */
+  --text-secondary: #3B584C;          /* Balanced mid-tone sage-charcoal */
+  --text-muted: #668276;              /* Subtle neutral */
+  --text-inverse: #FFFFFF;            /* Pure white on dark buttons/badges */
+
+  /* Structural Borders & Subtle Facets */
+  --border-subtle: rgba(20, 107, 68, 0.12);
+  --border-medium: rgba(20, 107, 68, 0.22);
+  --border-accent: rgba(82, 178, 22, 0.45);
+  --border-emerald: rgba(20, 107, 68, 0.35);
 
   /* Typography */
   --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-  /* Elevation & Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.65);
-  --shadow-glow: 0 0 30px var(--accent-green-glow);
+  /* Elevation & Shadows (Calibrated for Light Theme) */
+  --shadow-xs: 0 1px 4px rgba(10, 34, 26, 0.04);
+  --shadow-sm: 0 3px 12px rgba(10, 34, 26, 0.06);
+  --shadow-md: 0 8px 24px rgba(10, 34, 26, 0.08);
+  --shadow-lg: 0 18px 48px rgba(10, 34, 26, 0.10);
+  --shadow-lime: 0 6px 20px rgba(82, 178, 22, 0.25);
+  --shadow-emerald: 0 6px 22px rgba(20, 107, 68, 0.20);
 
   /* Transitions */
   --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
@@ -49,12 +61,13 @@
   --duration-normal: 0.3s;
   --duration-slow: 0.6s;
 
-  /* Layout Containers */
+  /* Containers & Spacing */
   --container-max: 1320px;
   --container-pad: clamp(1.25rem, 4vw, 2.5rem);
-  --header-height: 80px;
-  --radius-sm: 6px;
-  --radius-md: 12px;
+  --header-height: 76px;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 14px;
   --radius-lg: 20px;
   --radius-full: 9999px;
 }
@@ -68,7 +81,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 20px);
+  scroll-padding-top: calc(var(--header-height) + 24px);
   -webkit-text-size-adjust: 100%;
   background-color: var(--bg-primary);
   color: var(--text-primary);
@@ -87,16 +100,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle Technical Grid Background */
+/* Elegant Light Background with Subtle Bio-Geometric Crystal Atmosphere */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(0, 229, 153, 0.04) 0%, transparent 60%),
-    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
-  background-size: 100% 100%, 48px 48px, 48px 48px;
+    radial-gradient(circle at 85% -5%, rgba(82, 178, 22, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 10% 35%, rgba(20, 107, 68, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 65% 95%, rgba(82, 178, 22, 0.04) 0%, transparent 50%),
+    linear-gradient(rgba(20, 107, 68, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 107, 68, 0.02) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
   pointer-events: none;
   z-index: -1;
 }
@@ -157,41 +172,41 @@ button, input, select, textarea {
 }
 
 .section {
-  padding-top: clamp(4.5rem, 8vw, 8rem);
-  padding-bottom: clamp(4.5rem, 8vw, 8rem);
+  padding-top: clamp(4.5rem, 8vw, 7.5rem);
+  padding-bottom: clamp(4.5rem, 8vw, 7.5rem);
   position: relative;
 }
 
+/* Crisp Light Section Tag Pill */
 .section-tag {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.85rem;
-  background: rgba(0, 229, 153, 0.08);
-  border: 1px solid rgba(0, 229, 153, 0.25);
+  gap: 0.6rem;
+  padding: 0.4rem 1.05rem;
+  background: linear-gradient(135deg, rgba(82, 178, 22, 0.1) 0%, rgba(20, 107, 68, 0.12) 100%);
+  border: 1px solid rgba(20, 107, 68, 0.25);
   border-radius: var(--radius-full);
   font-family: var(--font-display);
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--accent-green);
+  color: var(--accent-emerald);
   margin-bottom: 1.25rem;
 }
 
 .section-tag::before {
-  content: '';
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-green);
-  box-shadow: 0 0 8px var(--accent-green);
+  content: '♺';
+  font-size: 1.05rem;
+  line-height: 1;
+  color: var(--accent-lime);
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3.25rem);
-  font-weight: 700;
+  font-size: clamp(2.1rem, 4.4vw, 3.25rem);
+  font-weight: 800;
   letter-spacing: -0.025em;
+  color: var(--text-primary);
   margin-bottom: 1.25rem;
   max-width: 860px;
 }
@@ -200,21 +215,23 @@ button, input, select, textarea {
   font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   color: var(--text-secondary);
   max-width: 720px;
-  line-height: 1.65;
+  line-height: 1.68;
 }
 
+/* Professional Light Theme Text Gradients */
 .text-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 50%, #94A3B8 100%);
+  background: linear-gradient(135deg, #0A221A 0%, #164E38 60%, #1A8253 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .text-accent-gradient {
-  background: linear-gradient(135deg, #00E599 0%, #00B4D8 100%);
+  background: linear-gradient(135deg, #146B44 0%, #52B216 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+/* Grid Layouts */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -247,6 +264,6 @@ button, input, select, textarea {
     grid-template-columns: 1fr;
   }
   :root {
-    --header-height: 70px;
+    --header-height: 68px;
   }
 }

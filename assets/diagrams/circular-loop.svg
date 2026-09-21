@@ -1,51 +1,119 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 400" fill="none">
   <defs>
-    <linearGradient id="circleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00E599"/>
-      <stop offset="50%" stop-color="#00B4D8"/>
-      <stop offset="100%" stop-color="#00E599"/>
-    </linearGradient>
+    <radialGradient id="hubGlowLight" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#52B216" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#52B216" stop-opacity="0"/>
+    </radialGradient>
+
+    <style><![CDATA[
+      /* Self-contained animations for Closed-Loop Circular Model */
+      @keyframes orbit-cw {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes orbit-particle-flow {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes node-pulse {
+        0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
+        50% { transform: scale(1.06); filter: drop-shadow(0 0 8px #52B216); }
+      }
+
+      .animated-orbit-ring {
+        transform-origin: 270px 200px;
+        animation: orbit-cw 20s linear infinite;
+      }
+      .flowing-circular-arc {
+        stroke-dasharray: 12 16;
+        animation: orbit-particle-flow 1.5s linear infinite;
+      }
+      .center-core-hex {
+        transform-origin: 270px 200px;
+        animation: node-pulse 3s infinite ease-in-out;
+      }
+      .node-1 {
+        transform-origin: 270px 60px;
+        animation: node-pulse 2.5s infinite ease-in-out 0s;
+      }
+      .node-2 {
+        transform-origin: 410px 200px;
+        animation: node-pulse 2.5s infinite ease-in-out 0.6s;
+      }
+      .node-3 {
+        transform-origin: 270px 340px;
+        animation: node-pulse 2.5s infinite ease-in-out 1.2s;
+      }
+      .node-4 {
+        transform-origin: 130px 200px;
+        animation: node-pulse 2.5s infinite ease-in-out 1.8s;
+      }
+    ]]></style>
   </defs>
 
-  <!-- Technical Grid Background -->
-  <rect width="540" height="400" rx="16" fill="#0E1217"/>
-  <circle cx="270" cy="200" r="140" stroke="#1E293B" stroke-width="2" fill="none" stroke-dasharray="4 6"/>
-  <circle cx="270" cy="200" r="115" stroke="#161D26" stroke-width="1" fill="#0B0D0F"/>
+  <!-- Clean Professional Light Background -->
+  <rect width="540" height="400" rx="16" fill="#FFFFFF"/>
+  <rect x="1" y="1" width="538" height="398" rx="15" stroke="#E2EFE7" stroke-width="1.5"/>
 
-  <!-- Orbital Flow Arcs -->
-  <path d="M 270 60 A 140 140 0 0 1 410 200" stroke="#00E599" stroke-width="3" fill="none" stroke-dasharray="6 8"/>
-  <path d="M 410 200 A 140 140 0 0 1 270 340" stroke="#00B4D8" stroke-width="3" fill="none"/>
-  <path d="M 270 340 A 140 140 0 0 1 130 200" stroke="#334155" stroke-width="3" fill="none" stroke-dasharray="4 4"/>
-  <path d="M 130 200 A 140 140 0 0 1 270 60" stroke="#00E599" stroke-width="3" fill="none"/>
+  <!-- Soft Radial Ambient Glow -->
+  <circle cx="270" cy="200" r="160" fill="url(#hubGlowLight)"/>
 
-  <!-- Core Hexagon Hub -->
-  <polygon points="270,165 300,182 300,218 270,235 240,218 240,182" fill="#161F2A" stroke="#00E599" stroke-width="2"/>
-  <text x="270" y="196" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" fill="#F8FAFC" text-anchor="middle">CIRCULAR</text>
-  <text x="270" y="210" font-family="'Space Grotesk', monospace" font-size="9" fill="#00E599" text-anchor="middle">POLYMERS</text>
+  <!-- Circular Outer Static Orbits -->
+  <circle cx="270" cy="200" r="140" stroke="#DCECE2" stroke-width="2" fill="none" stroke-dasharray="5 7"/>
+  <circle cx="270" cy="200" r="115" stroke="#E5F2EA" stroke-width="1.5" fill="#F4FAF6"/>
 
-  <!-- Node 1: Waste Recovery (Top) -->
-  <circle cx="270" cy="60" r="22" fill="#121820" stroke="#00E599" stroke-width="2"/>
-  <text x="270" y="56" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00E599" text-anchor="middle">01</text>
-  <text x="270" y="68" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#F8FAFC" text-anchor="middle">RECLAIM</text>
-  <text x="270" y="26" font-family="'Space Grotesk', monospace" font-size="11" fill="#F8FAFC" text-anchor="middle" font-weight="600">POST-INDUSTRIAL WASTE</text>
+  <!-- Animated Rotating Orbit Ring with Flowing Energy Particles -->
+  <g class="animated-orbit-ring">
+    <circle cx="270" cy="60" r="6" fill="#52B216"/>
+    <circle cx="410" cy="200" r="6" fill="#146B44"/>
+    <circle cx="270" cy="340" r="6" fill="#68C924"/>
+    <circle cx="130" cy="200" r="6" fill="#1A8253"/>
+  </g>
 
-  <!-- Node 2: Processing & Granules (Right) -->
-  <circle cx="410" cy="200" r="22" fill="#121820" stroke="#00B4D8" stroke-width="2"/>
-  <text x="410" y="196" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00B4D8" text-anchor="middle">02</text>
-  <text x="410" y="208" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#F8FAFC" text-anchor="middle">REPROCESS</text>
-  <text x="450" y="195" font-family="'Space Grotesk', monospace" font-size="10" fill="#F8FAFC" font-weight="600">ENGINEERED</text>
-  <text x="450" y="209" font-family="'Space Grotesk', monospace" font-size="10" fill="#00B4D8">GRANULES</text>
+  <!-- Orbital Flow Arcs with Recycling Energy (Continuous Clockwise Flow) -->
+  <path d="M 270 60 A 140 140 0 0 1 410 200" stroke="#52B216" stroke-width="4" fill="none" class="flowing-circular-arc"/>
+  <path d="M 410 200 A 140 140 0 0 1 270 340" stroke="#146B44" stroke-width="4" fill="none" class="flowing-circular-arc"/>
+  <path d="M 270 340 A 140 140 0 0 1 130 200" stroke="#52B216" stroke-width="4" fill="none" class="flowing-circular-arc"/>
+  <path d="M 130 200 A 140 140 0 0 1 270 60" stroke="#1A8253" stroke-width="4" fill="none" class="flowing-circular-arc"/>
 
-  <!-- Node 3: Advanced Manufacturing & Film (Bottom) -->
-  <circle cx="270" cy="340" r="22" fill="#121820" stroke="#00E599" stroke-width="2"/>
-  <text x="270" y="336" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#00E599" text-anchor="middle">03</text>
-  <text x="270" y="348" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#F8FAFC" text-anchor="middle">RECREATE</text>
-  <text x="270" y="380" font-family="'Space Grotesk', monospace" font-size="11" fill="#F8FAFC" text-anchor="middle" font-weight="600">COATING FILM &amp; PRODUCTS</text>
+  <!-- Center Polymer Recycling Core -->
+  <g class="center-core-hex">
+    <polygon points="270,165 300,182 300,218 270,235 240,218 240,182" fill="#FFFFFF" stroke="#146B44" stroke-width="2"/>
+    <text x="270" y="194" font-family="'Space Grotesk', monospace" font-size="11" font-weight="700" fill="#0A221A" text-anchor="middle">CIRCULAR</text>
+    <text x="270" y="210" font-family="'Space Grotesk', monospace" font-size="9" fill="#146B44" font-weight="700" text-anchor="middle">ECONOMY</text>
+  </g>
 
-  <!-- Node 4: Industrial Utilization (Left) -->
-  <circle cx="130" cy="200" r="22" fill="#121820" stroke="#8E9AA8" stroke-width="2"/>
-  <text x="130" y="196" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" fill="#8E9AA8" text-anchor="middle">04</text>
-  <text x="130" y="208" font-family="'Plus Jakarta Sans', sans-serif" font-size="8" fill="#F8FAFC" text-anchor="middle">RECYCLE</text>
-  <text x="75" y="195" font-family="'Space Grotesk', monospace" font-size="10" fill="#F8FAFC" text-anchor="middle" font-weight="600">DOWNSTREAM</text>
-  <text x="75" y="209" font-family="'Space Grotesk', monospace" font-size="10" fill="#8E9AA8" text-anchor="middle">CONVERSION</text>
+  <!-- Node 01: Waste Recovery (Top) -->
+  <g class="node-1">
+    <circle cx="270" cy="60" r="23" fill="#FFFFFF" stroke="#52B216" stroke-width="2.5"/>
+    <text x="270" y="56" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" fill="#52B216" text-anchor="middle">01</text>
+    <text x="270" y="69" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#0A221A" text-anchor="middle">RECLAIM</text>
+  </g>
+  <text x="270" y="26" font-family="'Space Grotesk', monospace" font-size="11" fill="#0A221A" text-anchor="middle" font-weight="700">POST-INDUSTRIAL WASTE</text>
+
+  <!-- Node 02: Reprocess & Granules (Right) -->
+  <g class="node-2">
+    <circle cx="410" cy="200" r="23" fill="#FFFFFF" stroke="#146B44" stroke-width="2.5"/>
+    <text x="410" y="196" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" fill="#146B44" text-anchor="middle">02</text>
+    <text x="410" y="209" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#0A221A" text-anchor="middle">REPROCESS</text>
+  </g>
+  <text x="450" y="195" font-family="'Space Grotesk', monospace" font-size="10" fill="#0A221A" font-weight="700">RECYCLED</text>
+  <text x="450" y="210" font-family="'Space Grotesk', monospace" font-size="10" fill="#146B44" font-weight="700">GRANULES</text>
+
+  <!-- Node 03: Recreate & Films (Bottom) -->
+  <g class="node-3">
+    <circle cx="270" cy="340" r="23" fill="#FFFFFF" stroke="#52B216" stroke-width="2.5"/>
+    <text x="270" y="336" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" fill="#52B216" text-anchor="middle">03</text>
+    <text x="270" y="349" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#0A221A" text-anchor="middle">RECREATE</text>
+  </g>
+  <text x="270" y="380" font-family="'Space Grotesk', monospace" font-size="11" fill="#0A221A" text-anchor="middle" font-weight="700">COATING FILM &amp; PRODUCTS</text>
+
+  <!-- Node 04: Closed Loop Industrial Conversion (Left) -->
+  <g class="node-4">
+    <circle cx="130" cy="200" r="23" fill="#FFFFFF" stroke="#1A8253" stroke-width="2.5"/>
+    <text x="130" y="196" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" fill="#1A8253" text-anchor="middle">04</text>
+    <text x="130" y="209" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="700" fill="#0A221A" text-anchor="middle">REUSE</text>
+  </g>
+  <text x="75" y="195" font-family="'Space Grotesk', monospace" font-size="10" fill="#0A221A" text-anchor="middle" font-weight="700">DOWNSTREAM</text>
+  <text x="75" y="210" font-family="'Space Grotesk', monospace" font-size="10" fill="#146B44" text-anchor="middle" font-weight="700">CONVERSION</text>
 </svg>

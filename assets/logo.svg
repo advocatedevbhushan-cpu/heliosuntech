@@ -1,32 +1,32 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 64" fill="none">
-  <!-- Polymer Molecule / Circular Hexagon Symbol -->
+  <!-- Circular Polymer Recycling Hexagon Symbol -->
   <g transform="translate(4, 4)">
-    <circle cx="28" cy="28" r="26" stroke="#1E293B" stroke-width="2" fill="#0B0D0F"/>
+    <circle cx="28" cy="28" r="26" stroke="#DCECE2" stroke-width="1.8" fill="#F4FAF6"/>
     
-    <!-- Outer Orbit Path -->
-    <path d="M 28 6 A 22 22 0 0 1 50 28" stroke="#00E599" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 6"/>
-    <path d="M 50 28 A 22 22 0 0 1 28 50" stroke="#00B4D8" stroke-width="2.5" stroke-linecap="round"/>
-    <path d="M 28 50 A 22 22 0 0 1 6 28" stroke="#334155" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Outer Recycling Orbit Path -->
+    <path d="M 28 6 A 22 22 0 0 1 50 28" stroke="#52B216" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 6"/>
+    <path d="M 50 28 A 22 22 0 0 1 28 50" stroke="#146B44" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M 28 50 A 22 22 0 0 1 6 28" stroke="#52B216" stroke-width="2.5" stroke-linecap="round"/>
     
     <!-- Central Geometric Polymer Core -->
-    <polygon points="28,14 40,21 40,35 28,42 16,35 16,21" stroke="#F8FAFC" stroke-width="1.8" fill="#121820"/>
-    <circle cx="28" cy="14" r="3" fill="#00E599"/>
-    <circle cx="40" cy="21" r="3" fill="#00B4D8"/>
-    <circle cx="40" cy="35" r="3" fill="#00E599"/>
-    <circle cx="28" cy="42" r="3" fill="#00B4D8"/>
-    <circle cx="16" cy="35" r="3" fill="#00E599"/>
-    <circle cx="16" cy="21" r="3" fill="#00B4D8"/>
+    <polygon points="28,14 40,21 40,35 28,42 16,35 16,21" stroke="#0D2338" stroke-width="1.8" fill="#FFFFFF"/>
+    <circle cx="28" cy="14" r="3" fill="#52B216"/>
+    <circle cx="40" cy="21" r="3" fill="#146B44"/>
+    <circle cx="40" cy="35" r="3" fill="#52B216"/>
+    <circle cx="28" cy="42" r="3" fill="#146B44"/>
+    <circle cx="16" cy="35" r="3" fill="#52B216"/>
+    <circle cx="16" cy="21" r="3" fill="#146B44"/>
     
     <!-- Center Node -->
-    <circle cx="28" cy="28" r="4.5" fill="#00E599"/>
-    <circle cx="28" cy="28" r="2" fill="#0B0D0F"/>
+    <circle cx="28" cy="28" r="4.5" fill="#52B216"/>
+    <circle cx="28" cy="28" r="2" fill="#0D2338"/>
   </g>
 
-  <!-- Typography: HELIOSUNTECH PLASTICS -->
-  <text x="74" y="33" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" letter-spacing="3" fill="#F8FAFC">
+  <!-- Typography: HELIOSUNTECH PLASTICS in Deep Corporate Navy & Emerald -->
+  <text x="74" y="33" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-weight="800" font-size="22" letter-spacing="3" fill="#0D2338">
     HELIOSUNTECH
   </text>
-  <text x="74" y="47" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="600" font-size="8.5" letter-spacing="4.5" fill="#00E599">
+  <text x="74" y="47" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="700" font-size="8.5" letter-spacing="4.5" fill="#146B44">
     PLASTICS PRIVATE LIMITED
   </text>
 </svg>

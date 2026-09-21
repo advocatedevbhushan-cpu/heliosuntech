@@ -1,6 +1,7 @@
 /**
  * HELIOSUNTECH PLASTICS - INTERACTIVE MATERIAL FLOW (WASTE TO MATERIAL)
  * 6-Stage Timeline: 01 COLLECT -> 02 SORT -> 03 PROCESS -> 04 GRANULATE -> 05 MANUFACTURE -> 06 REUSE
+ * Light Professional Theme: Crisp White, Soft Mint (#F4FAF6), Emerald (#146B44), Lime (#52B216)
  */
 
 const MATERIAL_STAGES = [
@@ -15,16 +16,16 @@ const MATERIAL_STAGES = [
     controlPoint: "Feedstock contamination verification",
     diagramSvg: `
       <svg viewBox="0 0 320 220" fill="none" class="w-full h-auto">
-        <rect width="320" height="220" rx="8" fill="#0C1017"/>
-        <path d="M40 180 L120 70 L200 180 Z" fill="#182230" stroke="#334155" stroke-width="2"/>
-        <polygon points="90,130 110,120 120,135 100,145" fill="#00E599" opacity="0.8"/>
-        <polygon points="130,140 150,130 145,155 125,150" fill="#00B4D8" opacity="0.8"/>
-        <polygon points="105,155 125,150 120,170 100,168" fill="#F8FAFC" opacity="0.6"/>
-        <text x="120" y="55" fill="#8E9AA8" font-family="'Space Grotesk', monospace" font-size="11" text-anchor="middle">RECOVERY INLET</text>
-        <circle cx="120" cy="180" r="16" fill="#121820" stroke="#00E599"/>
-        <path d="M120 172 V188 M112 180 H128" stroke="#00E599" stroke-width="2"/>
-        <text x="240" y="110" fill="#00E599" font-family="'Space Grotesk', monospace" font-size="12" font-weight="700">STAGE 01</text>
-        <text x="240" y="128" fill="#94A3B8" font-size="10">Feedstock Sorting</text>
+        <rect width="320" height="220" rx="8" fill="#F4FAF6"/>
+        <path d="M40 180 L120 70 L200 180 Z" fill="#EAF4EE" stroke="#146B44" stroke-width="2"/>
+        <polygon points="90,130 110,120 120,135 100,145" fill="#52B216" opacity="0.9"/>
+        <polygon points="130,140 150,130 145,155 125,150" fill="#146B44" opacity="0.85"/>
+        <polygon points="105,155 125,150 120,170 100,168" fill="#3B584C" opacity="0.6"/>
+        <text x="120" y="55" fill="#146B44" font-family="'Space Grotesk', monospace" font-size="11" font-weight="700" text-anchor="middle">RECOVERY INLET</text>
+        <circle cx="120" cy="180" r="16" fill="#FFFFFF" stroke="#52B216" stroke-width="2"/>
+        <path d="M120 172 V188 M112 180 H128" stroke="#52B216" stroke-width="2"/>
+        <text x="240" y="110" fill="#146B44" font-family="'Space Grotesk', monospace" font-size="12" font-weight="700">STAGE 01</text>
+        <text x="240" y="128" fill="#3B584C" font-size="10" font-weight="600">Feedstock Intake</text>
       </svg>
     `
   },
@@ -39,15 +40,15 @@ const MATERIAL_STAGES = [
     controlPoint: "Near-Infrared (NIR) spectrum verification",
     diagramSvg: `
       <svg viewBox="0 0 320 220" fill="none">
-        <rect width="320" height="220" rx="8" fill="#0C1017"/>
-        <line x1="60" y1="40" x2="260" y2="40" stroke="#1E293B" stroke-width="3"/>
-        <rect x="130" y="30" width="60" height="20" rx="4" fill="#00E599"/>
-        <text x="160" y="44" fill="#0B0D11" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" text-anchor="middle">OPTICAL NIR</text>
-        <path d="M140 50 L110 110 M160 50 L160 110 M180 50 L210 110" stroke="#00E599" stroke-dasharray="2 3"/>
-        <rect x="80" y="120" width="60" height="50" rx="6" fill="#151D28" stroke="#00E599"/>
-        <text x="110" y="150" fill="#00E599" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">PP / HDPE</text>
-        <rect x="180" y="120" width="60" height="50" rx="6" fill="#151D28" stroke="#00B4D8"/>
-        <text x="210" y="150" fill="#00B4D8" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">LDPE / LLDPE</text>
+        <rect width="320" height="220" rx="8" fill="#F4FAF6"/>
+        <line x1="60" y1="40" x2="260" y2="40" stroke="#DCECE2" stroke-width="3"/>
+        <rect x="130" y="30" width="60" height="20" rx="4" fill="#52B216"/>
+        <text x="160" y="44" fill="#FFFFFF" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" text-anchor="middle">OPTICAL NIR</text>
+        <path d="M140 50 L110 110 M160 50 L160 110 M180 50 L210 110" stroke="#52B216" stroke-dasharray="2 3"/>
+        <rect x="80" y="120" width="60" height="50" rx="6" fill="#FFFFFF" stroke="#146B44"/>
+        <text x="110" y="150" fill="#146B44" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" text-anchor="middle">PP / HDPE</text>
+        <rect x="180" y="120" width="60" height="50" rx="6" fill="#FFFFFF" stroke="#52B216"/>
+        <text x="210" y="150" fill="#52B216" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" text-anchor="middle">LDPE / LLDPE</text>
       </svg>
     `
   },
@@ -62,19 +63,19 @@ const MATERIAL_STAGES = [
     controlPoint: "Moisture content < 0.2% & purity inspection",
     diagramSvg: `
       <svg viewBox="0 0 320 220" fill="none">
-        <rect width="320" height="220" rx="8" fill="#0C1017"/>
-        <circle cx="110" cy="110" r="45" fill="#161F2C" stroke="#334155" stroke-width="2"/>
-        <line x1="85" y1="85" x2="135" y2="135" stroke="#00E599" stroke-width="3"/>
-        <line x1="135" y1="85" x2="85" y2="135" stroke="#00E599" stroke-width="3"/>
-        <circle cx="110" cy="110" r="15" fill="#0B0D11" stroke="#00B4D8" stroke-width="2"/>
-        <text x="110" y="180" fill="#8E9AA8" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">SHREDDER / ROTOR</text>
+        <rect width="320" height="220" rx="8" fill="#F4FAF6"/>
+        <circle cx="110" cy="110" r="45" fill="#EAF4EE" stroke="#146B44" stroke-width="2"/>
+        <line x1="85" y1="85" x2="135" y2="135" stroke="#52B216" stroke-width="3"/>
+        <line x1="135" y1="85" x2="85" y2="135" stroke="#52B216" stroke-width="3"/>
+        <circle cx="110" cy="110" r="15" fill="#FFFFFF" stroke="#146B44" stroke-width="2"/>
+        <text x="110" y="180" fill="#3B584C" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">FRICTION ROTOR</text>
         <g transform="translate(190, 80)">
-          <polygon points="10,10 25,5 20,22 8,20" fill="#00E599"/>
-          <polygon points="40,15 55,10 50,28 35,25" fill="#00B4D8"/>
-          <polygon points="20,40 35,35 30,52 15,50" fill="#F8FAFC"/>
-          <polygon points="50,45 65,40 60,58 45,55" fill="#00E599"/>
+          <polygon points="10,10 25,5 20,22 8,20" fill="#52B216"/>
+          <polygon points="40,15 55,10 50,28 35,25" fill="#146B44"/>
+          <polygon points="20,40 35,35 30,52 15,50" fill="#3B584C"/>
+          <polygon points="50,45 65,40 60,58 45,55" fill="#52B216"/>
         </g>
-        <text x="230" y="165" fill="#00E599" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">PURE FLAKES</text>
+        <text x="230" y="165" fill="#146B44" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" text-anchor="middle">PURE FLAKES</text>
       </svg>
     `
   },
@@ -89,19 +90,19 @@ const MATERIAL_STAGES = [
     controlPoint: "Melt Flow Index (MFI) & density calibration",
     diagramSvg: `
       <svg viewBox="0 0 320 220" fill="none">
-        <rect width="320" height="220" rx="8" fill="#0C1017"/>
-        <rect x="40" y="85" width="160" height="40" rx="4" fill="#1C2432" stroke="#334155" stroke-width="2"/>
-        <path d="M45 105 Q65 95 85 105 T125 105 T165 105 T195 105" stroke="#00E599" stroke-width="3" fill="none"/>
-        <polygon points="200,92 225,98 225,112 200,118" fill="#00B4D8"/>
+        <rect width="320" height="220" rx="8" fill="#F4FAF6"/>
+        <rect x="40" y="85" width="160" height="40" rx="4" fill="#EAF4EE" stroke="#146B44" stroke-width="2"/>
+        <path d="M45 105 Q65 95 85 105 T125 105 T165 105 T195 105" stroke="#52B216" stroke-width="3" fill="none"/>
+        <polygon points="200,92 225,98 225,112 200,118" fill="#146B44"/>
         <g transform="translate(240, 85)">
-          <circle cx="10" cy="10" r="5" fill="#00E599"/>
-          <circle cx="25" cy="8" r="5" fill="#00B4D8"/>
-          <circle cx="40" cy="12" r="5" fill="#00E599"/>
-          <circle cx="18" cy="25" r="5" fill="#F8FAFC"/>
-          <circle cx="34" cy="24" r="5" fill="#00E599"/>
+          <circle cx="10" cy="10" r="5" fill="#52B216"/>
+          <circle cx="25" cy="8" r="5" fill="#146B44"/>
+          <circle cx="40" cy="12" r="5" fill="#52B216"/>
+          <circle cx="18" cy="25" r="5" fill="#3B584C"/>
+          <circle cx="34" cy="24" r="5" fill="#52B216"/>
         </g>
-        <text x="120" y="155" fill="#8E9AA8" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">TWIN-SCREW EXTRUSION</text>
-        <text x="265" y="145" fill="#00E599" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">PELLETS</text>
+        <text x="120" y="155" fill="#3B584C" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">TWIN-SCREW EXTRUSION</text>
+        <text x="265" y="145" fill="#146B44" font-family="'Space Grotesk', monospace" font-size="10" font-weight="700" text-anchor="middle">GRANULES</text>
       </svg>
     `
   },
@@ -116,13 +117,13 @@ const MATERIAL_STAGES = [
     controlPoint: "Micron thickness uniformity & surface tension",
     diagramSvg: `
       <svg viewBox="0 0 320 220" fill="none">
-        <rect width="320" height="220" rx="8" fill="#0C1017"/>
-        <circle cx="80" cy="110" r="28" fill="#1C2432" stroke="#00E599" stroke-width="2"/>
-        <circle cx="140" cy="80" r="18" fill="#1C2432" stroke="#475569" stroke-width="2"/>
-        <circle cx="200" cy="130" r="20" fill="#1C2432" stroke="#475569" stroke-width="2"/>
-        <path d="M80 82 C110 82, 120 62, 140 62 S180 110, 200 110 L260 110" stroke="#00E599" stroke-width="4" fill="none"/>
-        <circle cx="260" cy="110" r="26" fill="#121820" stroke="#00B4D8" stroke-width="2"/>
-        <text x="160" y="185" fill="#F8FAFC" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">CALENDER &amp; CHILL ROLLERS</text>
+        <rect width="320" height="220" rx="8" fill="#F4FAF6"/>
+        <circle cx="80" cy="110" r="28" fill="#EAF4EE" stroke="#146B44" stroke-width="2"/>
+        <circle cx="140" cy="80" r="18" fill="#EAF4EE" stroke="#52B216" stroke-width="2"/>
+        <circle cx="200" cy="130" r="20" fill="#EAF4EE" stroke="#146B44" stroke-width="2"/>
+        <path d="M80 82 C110 82, 120 62, 140 62 S180 110, 200 110 L260 110" stroke="#52B216" stroke-width="4" fill="none"/>
+        <circle cx="260" cy="110" r="26" fill="#FFFFFF" stroke="#146B44" stroke-width="2"/>
+        <text x="160" y="185" fill="#0A221A" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">CALENDER &amp; CHILL ROLLERS</text>
       </svg>
     `
   },
@@ -137,14 +138,14 @@ const MATERIAL_STAGES = [
     controlPoint: "End-of-life recyclability validation",
     diagramSvg: `
       <svg viewBox="0 0 320 220" fill="none">
-        <rect width="320" height="220" rx="8" fill="#0C1017"/>
-        <circle cx="160" cy="105" r="55" stroke="#1E293B" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
-        <path d="M160 50 A55 55 0 0 1 215 105" stroke="#00E599" stroke-width="3" fill="none"/>
-        <path d="M215 105 A55 55 0 0 1 160 160" stroke="#00B4D8" stroke-width="3" fill="none"/>
-        <path d="M160 160 A55 55 0 0 1 105 105" stroke="#00E599" stroke-width="3" fill="none"/>
-        <polygon points="160,85 180,97 180,121 160,133 140,121 140,97" fill="#161E2A" stroke="#00E599" stroke-width="1.5"/>
-        <text x="160" y="112" fill="#00E599" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" text-anchor="middle">CIRCULAR</text>
-        <text x="160" y="190" fill="#8E9AA8" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">CONTINUOUS MATERIAL CYCLE</text>
+        <rect width="320" height="220" rx="8" fill="#F4FAF6"/>
+        <circle cx="160" cy="105" r="55" stroke="#DCECE2" stroke-width="2" fill="none" stroke-dasharray="4 4"/>
+        <path d="M160 50 A55 55 0 0 1 215 105" stroke="#52B216" stroke-width="3" fill="none"/>
+        <path d="M215 105 A55 55 0 0 1 160 160" stroke="#146B44" stroke-width="3" fill="none"/>
+        <path d="M160 160 A55 55 0 0 1 105 105" stroke="#52B216" stroke-width="3" fill="none"/>
+        <polygon points="160,85 180,97 180,121 160,133 140,121 140,97" fill="#FFFFFF" stroke="#146B44" stroke-width="1.8"/>
+        <text x="160" y="112" fill="#146B44" font-family="'Space Grotesk', monospace" font-size="9" font-weight="700" text-anchor="middle">CIRCULAR</text>
+        <text x="160" y="190" fill="#3B584C" font-family="'Space Grotesk', monospace" font-size="10" text-anchor="middle">CONTINUOUS MATERIAL CYCLE</text>
       </svg>
     `
   }
@@ -193,7 +194,7 @@ class MaterialFlowManager {
         ${stage.diagramSvg}
       </div>
       <div class="flow-display-content">
-        <div class="section-tag">${stage.num} — STAGE PIPELINE</div>
+        <div class="section-tag">${stage.num} — CIRCULAR PIPELINE</div>
         <h3>${stage.title}</h3>
         <p>${stage.description}</p>
         <div class="flow-specs-list">
