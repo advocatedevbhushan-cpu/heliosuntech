@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://advocatedevbhushan-cpu.github.io/heliosuntech/sitemap.xml
+Sitemap: https://heliosuntech.com/sitemap.xml
