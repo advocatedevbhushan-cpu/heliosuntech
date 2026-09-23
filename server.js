@@ -23,7 +23,10 @@ const server = http.createServer((req, res) => {
       res.end('404 Not Found: ' + file);
     } else {
       const ext = path.extname(filePath).toLowerCase();
-      res.writeHead(200, { 'Content-Type': mime[ext] || 'application/octet-stream' });
+      res.writeHead(200, { 
+        'Content-Type': mime[ext] || 'application/octet-stream',
+        'Cache-Control': 'no-cache, no-store, must-revalidate'
+      });
       res.end(data);
     }
   });

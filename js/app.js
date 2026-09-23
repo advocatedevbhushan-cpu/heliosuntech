@@ -60,22 +60,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 8. Mobile Navigation Drawer
+  // 8. Mobile Navigation Drawer & Backdrop Handling
   const mobileToggle = document.getElementById('mobileToggle');
   const mobileDrawer = document.getElementById('mobileDrawer');
   
   if (mobileToggle && mobileDrawer) {
-    mobileToggle.addEventListener('click', () => {
-      mobileDrawer.classList.toggle('open');
+    // Ensure backdrop exists
+    let backdrop = document.getElementById('mobileDrawerBackdrop');
+    if (!backdrop) {
+      backdrop = document.createElement('div');
+      backdrop.id = 'mobileDrawerBackdrop';
+      backdrop.className = 'mobile-nav-backdrop';
+      document.body.appendChild(backdrop);
+    }
+
+    const closeDrawer = () => {
+      mobileDrawer.classList.remove('open');
+      mobileToggle.classList.remove('active');
+      mobileToggle.setAttribute('aria-expanded', 'false');
+      backdrop.classList.remove('open');
+      document.body.classList.remove('body-locked');
+    };
+
+    const openDrawer = () => {
+      mobileDrawer.classList.add('open');
+      mobileToggle.classList.add('active');
+      mobileToggle.setAttribute('aria-expanded', 'true');
+      backdrop.classList.add('open');
+      document.body.classList.add('body-locked');
+    };
+
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isOpen = mobileDrawer.classList.contains('open');
-      mobileToggle.setAttribute('aria-expanded', isOpen);
+      if (isOpen) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
     });
+
+    backdrop.addEventListener('click', closeDrawer);
 
     // Close mobile drawer when link clicked
     mobileDrawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
-      });
+      link.addEventListener('click', closeDrawer);
+    });
+
+    // Close drawer on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
+        closeDrawer();
+      }
     });
   }
 

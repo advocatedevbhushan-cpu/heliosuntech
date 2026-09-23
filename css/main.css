@@ -88,6 +88,8 @@ html {
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -95,9 +97,16 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.body-locked {
+  overflow: hidden !important;
+  touch-action: none;
 }
 
 /* Elegant Light Background with Subtle Bio-Geometric Crystal Atmosphere */
@@ -260,10 +269,32 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+    --container-pad: 1rem;
+  }
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-left: var(--container-pad) !important;
+    padding-right: var(--container-pad) !important;
+  }
   .grid-2, .grid-3, .grid-4 {
     grid-template-columns: 1fr;
+    gap: 1.25rem;
   }
-  :root {
-    --header-height: 68px;
+  .section {
+    padding-top: clamp(3rem, 6.5vw, 4.5rem);
+    padding-bottom: clamp(3rem, 6.5vw, 4.5rem);
+  }
+  .section-title {
+    font-size: clamp(1.75rem, 5.8vw, 2.35rem);
+    word-break: break-word;
+    letter-spacing: -0.02em;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    line-height: 1.6;
   }
 }

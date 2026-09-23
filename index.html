@@ -25,9 +25,9 @@
   <meta property="twitter:description" content="Precision plastics recycling, calibrated granules, and multi-layer coating film manufacturing.">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/main.css?v=2.1">
-  <link rel="stylesheet" href="css/components.css?v=2.1">
-  <link rel="stylesheet" href="css/animations.css?v=2.1">
+  <link rel="stylesheet" href="css/main.css?v=3.0">
+  <link rel="stylesheet" href="css/components.css?v=3.0">
+  <link rel="stylesheet" href="css/animations.css?v=3.0">
 
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
@@ -95,15 +95,24 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="drawer-plant-badge">
+      <span class="pulse-dot"></span>
+      <span>Ecotech-III, Greater Noida &bull; Active Plant</span>
+    </div>
     <a href="index.html" class="nav-link active">Home</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="solutions.html" class="nav-link">Solutions</a>
     <a href="products.html" class="nav-link">Products</a>
     <a href="quality.html" class="nav-link">Quality Control</a>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">
-      Request a Quote / RFQ
-    </a>
+    <div style="margin-top: auto; padding-top: 1rem; display: flex; flex-direction: column; gap: 0.65rem;">
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">
+        Request a Quote / RFQ &rarr;
+      </a>
+      <a href="mailto:contact@heliosuntech.com" class="btn btn-secondary btn-sm" style="width: 100%;">
+        Email Technical Desk
+      </a>
+    </div>
   </div>
 
   <main>
@@ -728,6 +737,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Mobile Quick Action Bar -->
+  <div class="mobile-quick-bar" aria-label="Quick mobile navigation actions">
+    <a href="mailto:contact@heliosuntech.com" class="btn btn-secondary btn-sm" aria-label="Email Plant Desk">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span>Email Desk</span>
+    </a>
+    <a href="contact.html" class="btn btn-primary btn-sm" aria-label="Request Instant Quote">
+      <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
+      <span>Instant RFQ</span>
+    </a>
+  </div>
 
   <!-- Scripts -->
   <script src="js/animations.js?v=2.1"></script>

@@ -9,9 +9,9 @@
   <meta name="robots" content="index, follow">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/main.css?v=2.1">
-  <link rel="stylesheet" href="css/components.css?v=2.1">
-  <link rel="stylesheet" href="css/animations.css?v=2.1">
+  <link rel="stylesheet" href="css/main.css?v=3.0">
+  <link rel="stylesheet" href="css/components.css?v=3.0">
+  <link rel="stylesheet" href="css/animations.css?v=3.0">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
 </head>
 <body>
@@ -53,15 +53,24 @@
 
   <!-- Mobile Drawer -->
   <div class="mobile-nav-drawer" id="mobileDrawer">
+    <div class="drawer-plant-badge">
+      <span class="pulse-dot"></span>
+      <span>Ecotech-III, Greater Noida &bull; Active Plant</span>
+    </div>
     <a href="index.html" class="nav-link">Home</a>
     <a href="about.html" class="nav-link">About</a>
     <a href="solutions.html" class="nav-link">Solutions</a>
     <a href="products.html" class="nav-link active">Products</a>
     <a href="quality.html" class="nav-link">Quality Control</a>
     <a href="contact.html" class="nav-link">Contact</a>
-    <a href="contact.html" class="btn btn-primary" style="margin-top: 1rem;">
-      Request a Quote / RFQ
-    </a>
+    <div style="margin-top: auto; padding-top: 1rem; display: flex; flex-direction: column; gap: 0.65rem;">
+      <a href="contact.html" class="btn btn-primary" style="width: 100%;">
+        Request a Quote / RFQ &rarr;
+      </a>
+      <a href="mailto:contact@heliosuntech.com" class="btn btn-secondary btn-sm" style="width: 100%;">
+        Email Technical Desk
+      </a>
+    </div>
   </div>
 
   <main>
@@ -112,7 +121,7 @@
         </div>
 
         <!-- Custom Compounding & Sample Callout -->
-        <div style="margin-top: 4rem; background: var(--bg-secondary); border: 1px solid var(--border-medium); border-radius: var(--radius-lg); padding: 3rem; text-align: center;" class="reveal-on-scroll">
+        <div class="custom-formulation-card reveal-on-scroll">
           <h3 style="font-size: 1.8rem; margin-bottom: 0.75rem; font-weight: 800;">Need a Customized Polymer Formulation?</h3>
           <p style="color: var(--text-secondary); max-width: 680px; margin: 0 auto 2rem; font-size: 1.05rem;">
             We calibrate Melt Flow Index (MFI), filler percentages, Izod impact resistance, and masterbatch color matching to match your manufacturing machines.
@@ -272,6 +281,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Mobile Quick Action Bar -->
+  <div class="mobile-quick-bar" aria-label="Quick mobile navigation actions">
+    <a href="mailto:contact@heliosuntech.com" class="btn btn-secondary btn-sm" aria-label="Email Plant Desk">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+        <polyline points="22,6 12,13 2,6"></polyline>
+      </svg>
+      <span>Email Desk</span>
+    </a>
+    <a href="contact.html" class="btn btn-primary btn-sm" aria-label="Request Instant Quote">
+      <span class="pulse-dot" style="width: 6px; height: 6px;"></span>
+      <span>Instant RFQ</span>
+    </a>
+  </div>
 
   <!-- Scripts -->
   <script src="js/catalogue.js?v=2.1"></script>
