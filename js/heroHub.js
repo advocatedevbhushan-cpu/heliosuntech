@@ -28,13 +28,13 @@ function initHeroHub() {
 
   const hubData = {
     flakes: {
-      badge: 'DIVISION 01 • RAW SCRAP TO FLAKES',
-      title: 'High-Purity Recycled Flakes',
-      desc: 'High-speed automated optical sorting, granulating, and hot-friction decontamination preserving baseline hydrocarbon integrity.',
+      badge: 'INTEGRATED RECYCLING • CLOSED-LOOP FEEDSTOCK',
+      title: 'Integrated Polymer Recovery & Flakes',
+      desc: 'In-house automated optical sorting, granulating, and hot-friction decontamination providing clean sustainable feedstock for our granule production.',
       specA: { val: '99.8%', lbl: 'Polymer Purity' },
       specB: { val: '< 0.05%', lbl: 'Moisture Residual' },
       specC: { val: '100%', lbl: 'Traceable Origin' },
-      telemetry: 'Optical Laser Segregation: ACTIVE | Friction Washer: 85°C | Cross-Contamination: 0.00%',
+      telemetry: 'In-House Circular Recovery: ACTIVE | Optical Sorter: ONLINE | Cross-Contamination: 0.00%',
       link: 'solutions.html#recycling',
       btnText: 'Explore Recycling Division →',
       graphicSvg: `
@@ -119,15 +119,15 @@ function initHeroHub() {
       `
     },
     granules: {
-      badge: 'DIVISION 02 • TWIN-SCREW COMPOUNDING',
-      title: 'Calibrated Recycled Granules',
-      desc: 'Underwater strand pelletizing with continuous melt-screen changers producing uniform LDPE, HDPE, PP & LLDPE pellets.',
+      badge: 'CORE PRODUCTION • PRECISION COMPOUNDING',
+      title: 'Precision Plastic Granules',
+      desc: 'Advanced twin-screw compounding and underwater strand pelletizing producing uniform, high-performance LDPE, HDPE, PP & LLDPE granules.',
       specA: { val: '2.1 ±0.2', lbl: 'MFI (g/10min ASTM D1238)' },
       specB: { val: '0.923', lbl: 'Density (g/cm³ ASTM D792)' },
       specC: { val: 'Grade-A', lbl: 'Homogeneity Rating' },
-      telemetry: 'Extruder Zone 4: 215°C | Vacuum Degassing: -0.92 Bar | Pelletizer Speed: 1,420 RPM',
-      link: 'solutions.html#granules',
-      btnText: 'Explore Granule Compounding →',
+      telemetry: 'Twin-Screw Extruder Zone 4: 215°C | Vacuum Degassing: -0.92 Bar | Pelletizer Speed: 1,420 RPM',
+      link: 'products.html?filter=granules',
+      btnText: 'Explore Plastic Granules →',
       graphicSvg: `
         <svg viewBox="0 0 280 200" fill="none" class="hub-svg-diagram">
           <defs>
@@ -220,15 +220,15 @@ function initHeroHub() {
       `
     },
     film: {
-      badge: 'DIVISION 03 • MULTI-LAYER FILM EXTRUSION',
+      badge: 'CORE PRODUCTION • TECHNICAL FILM EXTRUSION',
       title: 'Precision Plastic Coating Film',
       desc: 'Advanced cast & blown extrusion lines yielding uniform micron thickness, pinhole-free barrier protection, and high dart drop impact.',
       specA: { val: '25-120 μm', lbl: 'Gauge Caliber' },
       specB: { val: '> 180 g', lbl: 'Dart Drop Impact' },
       specC: { val: '42 Dynes', lbl: 'Corona Treatment' },
       telemetry: 'Line 01 Velocity: 48 m/min | Chill Roller Temp: 22°C | Gauge Uniformity: ±1.2 μm',
-      link: 'solutions.html#film',
-      btnText: 'Explore Film Manufacturing →',
+      link: 'products.html?filter=films',
+      btnText: 'Explore Coating Films →',
       graphicSvg: `
         <svg viewBox="0 0 280 200" fill="none" class="hub-svg-diagram">
           <defs>
@@ -337,7 +337,7 @@ function initHeroHub() {
     }
   };
 
-  const DIVISIONS = ['flakes', 'granules', 'film'];
+  const DIVISIONS = ['granules', 'film', 'flakes'];
   const CYCLE_MS = 5000;
   let currentIndex = 0;
   let timerId = null;
@@ -458,8 +458,8 @@ function initHeroHub() {
     });
   }
 
-  // Start with Division 01 Flakes (1), then gradually shift to 2, 3, 1, 2, 3...
-  updateHub('flakes', true);
+  // Start with Division 01 Granules (Core Manufacturing)
+  updateHub('granules', true);
   startAutoCycle();
 }
 
