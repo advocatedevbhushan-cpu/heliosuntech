@@ -337,7 +337,7 @@ function initHeroHub() {
     }
   };
 
-  const DIVISIONS = ['granules', 'film', 'flakes'];
+  const DIVISIONS = ['film', 'granules', 'flakes'];
   const CYCLE_MS = 5000;
   let currentIndex = 0;
   let timerId = null;
@@ -458,8 +458,8 @@ function initHeroHub() {
     });
   }
 
-  // Start with Division 01 Granules (Core Manufacturing)
-  updateHub('granules', true);
+  // Start with Division 01 Plastic Coating Film (Flagship Core Manufacturing)
+  updateHub('film', true);
   startAutoCycle();
 }
 

@@ -125,25 +125,77 @@ body::before {
   z-index: -1;
 }
 
-/* Typography Standards */
+/* Typography Standards & Clean Optical Indentation */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
   color: var(--text-primary);
   line-height: 1.2;
   font-weight: 700;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+h1 {
+  letter-spacing: -0.035em;
+  font-weight: 800;
+  line-height: 1.14;
+}
+
+h2 {
+  letter-spacing: -0.028em;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+h3 {
   letter-spacing: -0.02em;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+h4, h5, h6 {
+  letter-spacing: -0.015em;
+  font-weight: 700;
 }
 
 p {
   color: var(--text-secondary);
+  font-family: var(--font-body);
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.72;
+  letter-spacing: -0.005em;
+}
+
+ul:not([class]), ol:not([class]) {
+  padding-left: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+}
+
+ul:not([class]) li, ol:not([class]) li {
+  margin-bottom: 0.5rem;
+  line-height: 1.68;
+}
+
+/* Header dynamic scroll effect */
+.site-header {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.site-header.header-scrolled {
+  background-color: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 20px rgba(10, 34, 26, 0.08) !important;
+  border-bottom: 1px solid rgba(20, 107, 68, 0.16) !important;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  transition: color var(--duration-fast) ease;
+  transition: color var(--duration-fast) ease, opacity var(--duration-fast) ease;
 }
 
 img, svg {
@@ -156,6 +208,7 @@ button, input, select, textarea {
   font-family: inherit;
   font-size: inherit;
 }
+
 
 /* Accessible utility */
 .sr-only {

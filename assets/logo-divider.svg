@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 32" fill="none">
+  <defs>
+    <linearGradient id="divLeafGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1B6533"/>
+      <stop offset="60%" stop-color="#2C8840"/>
+      <stop offset="100%" stop-color="#41AA52"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Horizontal Rule Line -->
+  <line x1="10" y1="16" x2="80" y2="16" stroke="#0D2338" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Center Double Leaf Motif (Inspired by User's Second Image) -->
+  <g transform="translate(100, 16) scale(0.65)">
+    <!-- Right Leaf -->
+    <path d="M 0 0 C 4 -18 20 -28 32 -26 C 30 -10 18 4 0 0 Z" fill="url(#divLeafGrad)"/>
+    <path d="M 0 0 C 8 -12 18 -18 28 -24" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Left Leaf -->
+    <path d="M 0 0 C -4 -16 -16 -24 -26 -22 C -24 -8 -14 4 0 0 Z" fill="url(#divLeafGrad)"/>
+    <path d="M 0 0 C -6 -10 -14 -16 -22 -20" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+
+  <!-- Right Horizontal Rule Line -->
+  <line x1="120" y1="16" x2="190" y2="16" stroke="#0D2338" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

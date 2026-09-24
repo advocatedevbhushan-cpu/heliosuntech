@@ -115,6 +115,61 @@
   animation: pulse-ring 2.2s infinite ease-in-out;
 }
 
+/* ==========================================================================
+   PAGE-TO-PAGE TRANSITION ANIMATION SYSTEM
+   ========================================================================== */
+
+/* Top Loading Progress Bar */
+#pageProgressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #146B44 0%, #52B216 50%, #88DE3D 100%);
+  z-index: 99999;
+  box-shadow: 0 0 12px rgba(82, 178, 22, 0.8);
+  pointer-events: none;
+  opacity: 0;
+  transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
+}
+
+#pageProgressBar.is-loading {
+  opacity: 1;
+}
+
+/* Page Enter / Exit Animations */
+@keyframes pageEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pageExit {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
+body.page-enter {
+  animation: pageEnter 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.page-exit {
+  animation: pageExit 0.22s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
 /* 7. Scroll Reveal Framework with Staggering */
 .reveal-on-scroll {
   opacity: 0;
@@ -147,9 +202,68 @@
 .stagger-container.is-visible > *:nth-child(5) { transition-delay: 0.45s; }
 .stagger-container.is-visible > *:nth-child(6) { transition-delay: 0.55s; }
 
-/* 8. Stable Card Class (No 3D Tilt) */
-.interactive-tilt {
-  transform: none !important;
+/* 8. Button & Interactive Micro-Animations */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.24s ease, background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.28) 50%, transparent 100%);
+  transform: skewX(-22deg);
+  transition: none;
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  left: 150%;
+  transition: left 0.7s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+.btn:active {
+  transform: translateY(1px) !important;
+}
+
+/* Navbar Link Indicator Sweep */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0%;
+  height: 2.5px;
+  background: linear-gradient(90deg, var(--accent-emerald) 0%, var(--accent-lime) 100%);
+  transition: width 0.28s cubic-bezier(0.16, 1, 0.3, 1), left 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: 999px;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* Pulsing Badge Indicator */
+.pulse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  animation: pulse-glow 2.5s infinite ease-in-out;
 }
 
 /* --------------------------------------------------------------------------
@@ -169,4 +283,12 @@
     transform: none !important;
     transition: none !important;
   }
+
+  body.page-enter,
+  body.page-exit {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
+

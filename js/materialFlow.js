@@ -166,12 +166,12 @@ class MaterialFlowManager {
     this.navContainer.innerHTML = '';
     MATERIAL_STAGES.forEach((stage, idx) => {
       const btn = document.createElement('button');
-      btn.className = `flow-step-btn ${idx === 0 ? 'active' : ''}`;
+      btn.className = `flow-step-btn ${idx === 0 ? 'active' : ''} ${stage.id === 5 ? 'flagship-step-btn' : ''}`;
       btn.setAttribute('type', 'button');
       btn.setAttribute('aria-label', `Stage ${stage.num}: ${stage.name}`);
       btn.innerHTML = `
         <div class="flow-step-num">${stage.num}</div>
-        <div class="flow-step-name">${stage.name}</div>
+        <div class="flow-step-name">${stage.name} ${stage.id === 5 ? '<span style="color: #146B44; font-weight: 800;">★</span>' : ''}</div>
       `;
       btn.addEventListener('click', () => this.showStage(idx));
       this.navContainer.appendChild(btn);
@@ -189,13 +189,15 @@ class MaterialFlowManager {
     });
 
     // Update display card content
+    const isFilmFlagship = (stage.id === 5);
     this.displayCard.innerHTML = `
       <div class="flow-display-preview">
         ${stage.diagramSvg}
       </div>
       <div class="flow-display-content">
-        <div class="section-tag">${stage.num} — CIRCULAR PIPELINE</div>
+        <div class="section-tag">${isFilmFlagship ? '★ STAGE 05 — FLAGSHIP COATING FILM CONVERSION' : `${stage.num} — CIRCULAR PIPELINE`}</div>
         <h3>${stage.title}</h3>
+        ${isFilmFlagship ? '<p style="color: var(--accent-emerald); font-weight: 700; font-size: 0.9rem; margin-bottom: 0.5rem;">Core Manufacturing Culmination: Transforming Calibrated Granules into High-Barrier Protective Webs.</p>' : ''}
         <p>${stage.description}</p>
         <div class="flow-specs-list">
           <div class="flow-spec-row">
@@ -211,6 +213,11 @@ class MaterialFlowManager {
             <span>${stage.controlPoint}</span>
           </div>
         </div>
+        ${isFilmFlagship ? `
+          <div style="margin-top: 1.5rem;">
+            <a href="#film-showcase" class="btn btn-primary btn-sm">View Technical Coating Film Specs &rarr;</a>
+          </div>
+        ` : ''}
       </div>
     `;
   }

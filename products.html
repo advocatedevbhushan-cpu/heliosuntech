@@ -8,11 +8,16 @@
   <meta name="description" content="Browse our catalog of recycled plastic granules (PP, HDPE, LDPE, LLDPE) and industrial plastic coating films. Technical data sheets and sample consignments available.">
   <meta name="robots" content="index, follow">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css?v=3.0">
   <link rel="stylesheet" href="css/components.css?v=3.0">
   <link rel="stylesheet" href="css/animations.css?v=3.0">
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
 </head>
 <body>
 
@@ -98,12 +103,52 @@
          ========================================================================= -->
     <section class="section" id="catalogue">
       <div class="container">
+        <!-- Photorealistic Product Categories Showcase -->
+        <div class="product-category-showcase reveal-on-scroll" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2.5rem;">
+          <!-- 1. Coating Film -->
+          <div class="plant-gallery-card" style="cursor: pointer;" onclick="document.querySelector('[data-filter=\'films\']').click(); document.getElementById('catalogue').scrollIntoView({behavior:'smooth'});">
+            <div class="plant-gallery-img-wrap" style="height: 220px;">
+              <img src="assets/images/film-rolls.jpg" alt="Plastic Coating Films and Barrier Rolls" class="plant-gallery-img" loading="lazy">
+              <div class="plant-gallery-overlay">
+                <span class="plant-gallery-badge">★ Division 01 • Coating</span>
+                <h3 class="plant-gallery-title" style="font-size: 1.15rem;">Plastic Coating &amp; Barrier Films</h3>
+                <p class="plant-gallery-meta">Precision corona-treated polyolefin films engineered for high-speed converters.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Shrink Film -->
+          <div class="plant-gallery-card" style="cursor: pointer;" onclick="document.querySelector('[data-filter=\'shrink\']').click(); document.getElementById('catalogue').scrollIntoView({behavior:'smooth'});">
+            <div class="plant-gallery-img-wrap" style="height: 220px;">
+              <img src="assets/images/shrink-film-rolls.jpg" alt="Industrial Polyolefin Heat Shrink and Collation Film" class="plant-gallery-img" loading="lazy">
+              <div class="plant-gallery-overlay">
+                <span class="plant-gallery-badge">★ Division 01 • Shrink Packaging</span>
+                <h3 class="plant-gallery-title" style="font-size: 1.15rem;">Industrial Heat Shrink Films</h3>
+                <p class="plant-gallery-meta">Collation shrink, high-clarity POF rolls, and heavy-duty pallet shrink hoods.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Granules Compounding -->
+          <div class="plant-gallery-card" style="cursor: pointer;" onclick="document.querySelector('[data-filter=\'granules\']').click(); document.getElementById('catalogue').scrollIntoView({behavior:'smooth'});">
+            <div class="plant-gallery-img-wrap" style="height: 220px;">
+              <img src="assets/images/granules-macro.jpg" alt="Precision Plastic Granules &amp; Compounding Pellets" class="plant-gallery-img" loading="lazy">
+              <div class="plant-gallery-overlay">
+                <span class="plant-gallery-badge">Division 02 • Granules</span>
+                <h3 class="plant-gallery-title" style="font-size: 1.15rem;">Precision Plastic Granules</h3>
+                <p class="plant-gallery-meta">PP, HDPE, LDPE, and LLDPE pellets compounded to virgin-grade standards.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Catalogue Filter Bar -->
         <div class="catalogue-toolbar reveal-on-scroll">
           <div class="catalogue-tabs" role="tablist">
             <button class="tab-btn active" data-filter="all" role="tab" aria-selected="true">All Materials</button>
+            <button class="tab-btn" data-filter="films" role="tab" aria-selected="false">★ Coating Films</button>
+            <button class="tab-btn" data-filter="shrink" role="tab" aria-selected="false">★ Shrink Films</button>
             <button class="tab-btn" data-filter="granules" role="tab" aria-selected="false">Plastic Granules</button>
-            <button class="tab-btn" data-filter="films" role="tab" aria-selected="false">Plastic Coating Films</button>
           </div>
 
           <div class="catalogue-search">
@@ -181,9 +226,10 @@
           <div class="form-group">
             <label class="form-label">Requirement Type</label>
             <select id="rfqModalRequirementType" name="requirementType" class="form-select">
-              <option value="Plastic Recycling">Plastic Recycling</option>
-              <option value="Plastic Granules">Plastic Granules</option>
               <option value="Plastic Coating Film">Plastic Coating Film</option>
+              <option value="Industrial Shrink Film">Industrial Shrink Film</option>
+              <option value="Plastic Granules">Plastic Granules</option>
+              <option value="Plastic Recycling">Plastic Recycling</option>
               <option value="Bulk Requirement">Bulk Requirement</option>
               <option value="General Enquiry">General Enquiry</option>
             </select>

@@ -1,63 +1,63 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 64" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
   <defs>
     <!-- Rich Leaf Green Gradient -->
-    <linearGradient id="logoLeafGrad" x1="15%" y1="90%" x2="85%" y2="10%">
-      <stop offset="0%" stop-color="#1B6533"/>
+    <linearGradient id="leafGrad" x1="15%" y1="90%" x2="85%" y2="10%">
+      <stop offset="0%" stop-color="#1E6533"/>
       <stop offset="55%" stop-color="#2C8840"/>
       <stop offset="100%" stop-color="#41AA52"/>
     </linearGradient>
 
     <!-- Deep Corporate Navy Gradient -->
-    <linearGradient id="logoNavyGrad" x1="10%" y1="10%" x2="90%" y2="90%">
+    <linearGradient id="navyGrad" x1="10%" y1="10%" x2="90%" y2="90%">
       <stop offset="0%" stop-color="#091A2D"/>
       <stop offset="100%" stop-color="#102C4E"/>
     </linearGradient>
+
+    <!-- Subtle Drop Shadow -->
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#0A221A" flood-opacity="0.12"/>
+    </filter>
   </defs>
 
-  <!-- Circular Emblem (Inspired by User's Reference Mark) -->
-  <g transform="translate(2, 4) scale(0.56)">
+  <g filter="url(#logoShadow)">
     <!-- 1. Deep Corporate Navy Outer Crescent Arc -->
+    <!-- Runs from lower-left (38, 78) up-left (10, 48) around the top to upper-right (84, 18) -->
     <path d="M 38 80 C 18 72 8 54 8 38 C 8 18 26 6 50 6 C 68 6 82 14 88 22" 
-          stroke="url(#logoNavyGrad)" 
+          stroke="url(#navyGrad)" 
           stroke-width="7.5" 
           stroke-linecap="round" 
           stroke-linejoin="round"/>
 
-    <!-- 2. Lower Outer Cradling Leaf -->
+    <!-- 2. Lower Outer Cradling Leaf (Forms bottom & bottom-right circular border) -->
     <path d="M 18 64 C 24 84 44 94 66 94 C 82 94 92 82 96 66 C 88 80 72 86 52 86 C 36 86 24 78 18 64 Z" 
-          fill="url(#logoLeafGrad)"/>
+          fill="url(#leafGrad)"/>
 
-    <!-- 3. Primary Upright & Angled Leaf -->
+    <!-- 3. Primary Upright & Angled Leaf (Right/Center) -->
     <path d="M 44 76 C 42 54 54 36 88 20 C 98 42 92 68 76 80 C 64 72 52 74 44 76 Z" 
-          fill="url(#logoLeafGrad)"/>
+          fill="url(#leafGrad)"/>
 
     <!-- 4. Left Emerging Leaf -->
     <path d="M 44 76 C 34 66 30 52 34 38 C 42 42 46 54 48 68 C 47 71 45 74 44 76 Z" 
-          fill="url(#logoLeafGrad)"/>
+          fill="url(#leafGrad)"/>
 
-    <!-- 5. Crisp White Negative-Space Veins -->
+    <!-- 5. Crisp White Negative-Space Veins & Stems -->
+    <!-- Base main stem -->
     <path d="M 46 90 C 46 80 47 70 54 58 C 62 46 72 36 86 24" 
           stroke="#FFFFFF" 
           stroke-width="3.6" 
           stroke-linecap="round" 
           stroke-linejoin="round"/>
 
+    <!-- Secondary left branch -->
     <path d="M 48 68 C 42 58 38 52 36 42" 
           stroke="#FFFFFF" 
           stroke-width="3.2" 
           stroke-linecap="round"/>
 
+    <!-- Lower swoosh separation line -->
     <path d="M 46 86 C 58 84 72 78 88 64" 
           stroke="#FFFFFF" 
           stroke-width="3.2" 
           stroke-linecap="round"/>
   </g>
-
-  <!-- Typography: HELIOSUNTECH PLASTICS PRIVATE LIMITED -->
-  <text x="70" y="34" font-family="'Space Grotesk', system-ui, -apple-system, sans-serif" font-weight="800" font-size="23" letter-spacing="2.2" fill="url(#logoNavyGrad)">
-    HELIOSUNTECH
-  </text>
-  <text x="71" y="49" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-weight="700" font-size="8.5" letter-spacing="4.2" fill="#2C8840">
-    PLASTICS PRIVATE LIMITED
-  </text>
 </svg>

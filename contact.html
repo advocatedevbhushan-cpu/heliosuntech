@@ -8,11 +8,16 @@
   <meta name="description" content="Connect directly with Heliosuntech Plastics manufacturing unit at Ecotech-III, Greater Noida. Submit RFQ requests, schedule technical evaluations, or register as a scrap supplier.">
   <meta name="robots" content="index, follow">
 
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700;800&display=swap">
+
   <!-- Stylesheets -->
   <link rel="stylesheet" href="css/main.css?v=3.0">
   <link rel="stylesheet" href="css/components.css?v=3.0">
   <link rel="stylesheet" href="css/animations.css?v=3.0">
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/logo-icon.svg">
 </head>
 <body>
 
@@ -200,8 +205,9 @@
             <div class="form-group">
               <label class="form-label" for="rfqRequirementType">Requirement Type *</label>
               <select id="rfqRequirementType" name="requirementType" class="form-select">
-                <option value="Plastic Granules" selected>Precision Plastic Granules (PP, HDPE, LDPE, LLDPE)</option>
                 <option value="Plastic Coating Film">Plastic Coating &amp; Barrier Film</option>
+                <option value="Industrial Shrink Film">Industrial Heat Shrink Film (Collation / POF / Pallet Hood)</option>
+                <option value="Plastic Granules" selected>Precision Plastic Granules (PP, HDPE, LDPE, LLDPE)</option>
                 <option value="Manufacturing Partnership">Custom Compounding / Manufacturing Contract</option>
                 <option value="Plastic Recycling">Closed-Loop Recycling &amp; Feedstock Recovery</option>
                 <option value="Bulk Requirement">Bulk Enterprise Allocation</option>
@@ -211,7 +217,7 @@
 
             <div class="form-group">
               <label class="form-label" for="rfqProduct">Material / Product of Interest</label>
-              <input type="text" id="rfqProduct" name="product" class="form-input" placeholder="e.g. PP Injection Granules / Film Type CF-100">
+              <input type="text" id="rfqProduct" name="product" class="form-input" placeholder="e.g. Shrink Film SF-500 / Coating Film CF-100 / PP Granules">
             </div>
 
             <div class="form-group">
